@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy in Staging Environment'){
             steps{
-                timeout(time:1, unit:'Days'){
+                timeout(time:1, unit:'HOURS'){
                     input message:'Aprrove deployment?'
                 }
                 build job: 'deploy_app_staging'
