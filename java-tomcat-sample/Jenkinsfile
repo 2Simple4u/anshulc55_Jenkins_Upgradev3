@@ -12,16 +12,16 @@ pipeline {
                 }
             }
         }
-        stage('Deploy in Staging Environment'){
-            steps{
-                timeout(time:1, unit:'Days'){
-                    input message:'Aprrove deployment?'
-                }
-                build job: 'deploy_app_staging'
+        // stage('Deploy in Staging Environment'){
+        //     steps{
+        //         timeout(time:1, unit:'Days'){
+        //             input message:'Aprrove deployment?'
+        //         }
+        //         build job: 'deploy_app_staging'
 
-            }
+        //     }
             
-        }
+        // }
         // stage('Deploy to Production'){
         //     steps{
         //         timeout(time:5, unit:'DAYS'){
