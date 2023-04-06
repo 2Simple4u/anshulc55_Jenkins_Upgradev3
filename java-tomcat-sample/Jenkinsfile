@@ -12,12 +12,21 @@ pipeline {
                 }
             }
         }
+<<<<<<< HEAD
         // stage('Deploy in Staging Environment'){
         //     steps{
         //         timeout(time:1, unit:'Days'){
         //             input message:'Aprrove deployment?'
         //         }
         //         build job: 'deploy_app_staging'
+=======
+        stage('Deploy in Staging Environment'){
+            steps{
+                timeout(time:1, unit:'HOURS'){
+                    input message:'Aprrove deployment?'
+                }
+                build job: 'deploy_app_staging'
+>>>>>>> d9615e3b5a3dc0f1e3769d3801c4d18d2e27c58b
 
         //     }
             
